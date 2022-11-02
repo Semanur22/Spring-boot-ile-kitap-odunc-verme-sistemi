@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Management System</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+</head>
+<body>
+
+</br>
+<button onclick="history.back()"><-Geri</button>
+
+<h1> Kitap Ödünç Verme Sistemi </h1>
+</br>
+
+<h3>Kayıtlı Kişiler</h3>
+
+
+
+<table class = "table table-striped table-bordered">
+    <thead >
+    <tr>
+        <th> Ad Soyad</th>
+        <th> TC Kimlik No</th>
+        <th> Tel NO </th>
+        <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each = "person: ${persons}">
+        <td th:text = "${person.adSoyad}"></td>
+        <td th:text = "${person.tc}"></td>
+        <td th:text = "${person.telNo}"></td>
+        <td>
+            <form th:action="@{/kitapSec}" >
+                <button type="submit" class = "btn btn-primary">
+                    Kitap Seç ->
+                </button>
+            </form>
+
+        </td>
+    </tr>
+    </tbody>
+
+</table>
+
+</div>
+</body>
+</html>

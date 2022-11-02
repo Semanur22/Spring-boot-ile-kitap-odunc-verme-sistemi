@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+<body>
+
+</br>
+<h1 class = "text-center">Kitap Ödünç Verme Sistemi</h1>
+
+</br>
+
+<div class = "container">
+    <div class = "row">
+        <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+            <h3 class = "text-center">ANA MENÜ </h3>
+            <div class = "card-body">
+                <form th:action="@{/register}" >
+                    <div class ="form-group">
+                        <div class = "box-footer">
+                            <button type="submit" class = "btn btn-primary">
+                                Kişi Kayıt
+                             </button>
+                        </div>
+                    </div>
+                </form>
+                <form th:action="@{/persons}" >
+                    <div class ="form-group">
+                        <div class = "box-footer">
+                            <button type="submit" class = "btn btn-primary">
+                                Kayıtlı Kişiler
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <form th:action="@{/persons}" >
+                    <div class ="form-group">
+                        <div class = "box-footer">
+                            <button type="submit" class = "btn btn-primary">
+                                Kitap Teslim
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <form th:action="@{/addBook}" >
+                    <div class ="form-group">
+                        <div class = "box-footer">
+                            <button type="submit" class = "btn btn-primary">
+                                Kitap ekle
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <form th:action="@{/persons}" >
+                    <div class ="form-group">
+                        <div class = "box-footer">
+                            <button type="submit" class = "btn btn-danger">
+                                Kara Liste
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
